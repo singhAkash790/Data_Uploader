@@ -27,4 +27,4 @@ const Allimage = () => {
   )
 }
 
-export default Allimage
+export default Allimage;

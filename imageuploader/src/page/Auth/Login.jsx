@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {  onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "../../utilis/firebase.config";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
 
 
 const Login = () => {
@@ -22,6 +23,8 @@ const Login = () => {
         if (currentUser)navigate("/UploadImage");
       });
   return (
+    <>
+    <Header signup />
     <section class="h-screen flex justify-center items-center">
       <div class="h-[50%]">
         <div class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
@@ -171,6 +174,7 @@ const Login = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
